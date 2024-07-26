@@ -1,0 +1,55 @@
+/* Type selector */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* ID selector */
+#about-title {
+    color: #2E8B57; /* Dark green color */
+}
+
+/* Relational selector */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Combination selector */
+header h1, main h2 {
+    color: #4682B4; /* Steel blue color */
+}
+
+/* Pseudo-class */
+a:hover {
+    color: #FF4500; /* Orange-red color */
+    text-decoration: underline;
+}
+
+/* Pseudo-element */
+footer::before {
+    content: "Thank you for visiting! ";
+    font-weight: bold;
+}
+
+/* Styling fonts */
+p {
+    font-size: 1rem;
+    color: #333; /* Dark gray */
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+/* Attribute selector */
+img[alt] {
+    border: 2px solid #ccc; /* Light gray border */
+}
