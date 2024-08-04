@@ -1,55 +1,101 @@
-/* Type selector */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* ID selector */
-#about-title {
-    color: #2E8B57; /* Dark green color */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+nav button {
+    margin: 0 15px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+nav button:hover {
+    background-color: #0056b3;
 }
 
-/* Relational selector */
-header nav ul {
-    list-style-type: none;
-    padding: 0;
+.page {
+    display: none;
+    padding: 20px;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+.page.active {
+    display: flex;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Combination selector */
-header h1, main h2 {
-    color: #4682B4; /* Steel blue color */
+.column {
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
-/* Pseudo-class */
-a:hover {
-    color: #FF4500; /* Orange-red color */
-    text-decoration: underline;
+.column.left {
+    background: linear-gradient(to bottom right, #f0f8ff, #a7c7e7);
 }
 
-/* Pseudo-element */
-footer::before {
-    content: "Thank you for visiting! ";
-    font-weight: bold;
+.column.right {
+    background: linear-gradient(to bottom right, #e6e6fa, #c6c6e7);
 }
 
-/* Styling fonts */
-p {
-    font-size: 1rem;
-    color: #333; /* Dark gray */
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
 }
 
-footer p {
-    font-size: 0.8rem;
+footer {
+    margin-top: 30px;
 }
 
-/* Attribute selector */
-img[alt] {
-    border: 2px solid #ccc; /* Light gray border */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+#page1 header h1,
+#page2 header h1,
+#page3 header h1,
+#page4 header h1 {
+    animation: slideIn 20s linear infinite;
+    margin-bottom: 20px;
 }

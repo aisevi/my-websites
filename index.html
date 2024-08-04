@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noate Club</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <!-- Header section -->
-    <header>
-        <h1>Welcome to Kalapu Noate!</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <button onclick="showPage('page1')">About</button>
+        <button onclick="showPage('page2')">Services</button>
+        <button onclick="showPage('page3')">Gallery</button>
+        <button onclick="showPage('page4')">Contact</button>
+    </nav>
 
-    <!-- Main content section -->
-    <main>
-        <section id="about">
-            <h2 id="about-title">About Me</h2>
-            <p>Hello and welcome to kalapu Noate's digital page</p>
-        </section>
+    <div id="page1" class="page active">
+        <header>
+            <h1>Welcome to Kalapu Noate</h1>
+        </header>
+        <main class="container">
+            <div class="column left">
+                <img src="images/noate.png" alt="Description of image 1">
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 My Awesome Website. Created by [Aisea]</p>
+        </footer>
+    </div>
 
-        <section id="services">
-            <h2>Services Offered</h2>
-            <ul>
-                <li>kava session</li>
-                <li>jamming</li>
-                <li>donation</li>
-            </ul>
-        </section>
+    <div id="page2" class="page">
+        <header>
+            <h1>Services Offered</h1>
+        </header>
+        <main class="container">
+            <div class="column right">
+                <ul>
+                    <li>kava session</li>
+                    <li>jamming</li>
+                    <li>donation</li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 My Awesome Website. Created by [Aisea]</p>
+        </footer>
+    </div>
 
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <p>Here are some images showcasing [Kava Time].</p>
-            <img src="images/noate.png" alt="Description of image 1">
-            <img src="images/kava.png" alt="Description of image 2">
-        </section>
-    </main>
+    <div id="page3" class="page">
+        <header>
+            <h1>Here are some images showcasing [Kava Time].</h1>
+        </header>
+        <main class="container">
+            <div class="column left">
+                <img src="images/kava.png" alt="Description of image 2">
+            </div>
+            <div class="column right">
+                <img src="images/kava.png" alt="Description of image 2">
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 My Awesome Website. Created by [Aisea]</p>
+        </footer>
+    </div>
 
-    <!-- Footer section -->
-    <footer>
-        <p>&copy; 2024 My Awesome Website. Created by [Aisea]</p>
-    </footer>
+    <div id="page4" class="page">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+        <main class="container">
+            <div class="column left">
+                <img src="images/kava.png" alt="Description of image 2">
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 My Awesome Website. Created by [Aisea]</p>
+        </footer>
+    </div>
 
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            } else {
+                console.error('Page with ID ' + pageId + ' not found.');
+            }
+        }
+    </script>
 </body>
-
 </html>
