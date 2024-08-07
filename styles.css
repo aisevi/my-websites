@@ -1,3 +1,4 @@
+/* General Styles for the Body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
@@ -9,6 +10,7 @@ body {
     background-attachment: fixed;
 }
 
+/* Styles for the Navigation Menu */
 nav {
     display: flex;
     justify-content: center;
@@ -17,29 +19,28 @@ nav {
     background-color: #f8f9fa;
     border-bottom: 1px solid #ddd;
 }
-nav button {
+
+nav a {
     margin: 0 15px;
     padding: 12px 25px;
     font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #007bff;
+    text-decoration: none;
     color: white;
+    background-color: #007bff;
     border-radius: 4px;
 }
-nav button:hover {
+
+nav a:hover {
     background-color: #0056b3;
 }
 
+/* Styles for Page Content */
 .page {
-    display: none;
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
     flex-direction: column;
     align-items: center;
-}
-.page.active {
-    display: flex;
 }
 
 .container {
@@ -66,6 +67,7 @@ nav button:hover {
     background: linear-gradient(to bottom right, #e6e6fa, #c6c6e7);
 }
 
+/* Styles for Header and Footer */
 header, footer {
     text-align: center;
     padding: 20px;
@@ -77,6 +79,7 @@ footer {
     margin-top: 30px;
 }
 
+/* Keyframe Animation for Headers */
 @keyframes slideIn {
     0% {
         transform: translateX(-100%);
@@ -92,10 +95,34 @@ footer {
     }
 }
 
-#page1 header h1,
-#page2 header h1,
-#page3 header h1,
-#page4 header h1 {
+header h1 {
     animation: slideIn 20s linear infinite;
     margin-bottom: 20px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        margin: 10px 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .column {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
 }
