@@ -1,128 +1,184 @@
-/* General Styles for the Body */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
+/* Basic reset */
+* {
     margin: 0;
     padding: 0;
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    box-sizing: border-box;
 }
 
-/* Styles for the Navigation Menu */
-nav {
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e0f7fa;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg') no-repeat center center/cover;
+    height: 50vh;
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    padding: 15px 0;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin: 0 15px;
-    padding: 12px 25px;
-    font-size: 16px;
-    text-decoration: none;
-    color: white;
-    background-color: #007bff;
-    border-radius: 4px;
-}
-
-nav a:hover {
-    background-color: #0056b3;
-}
-
-/* Styles for Page Content */
-.page {
-    padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.column {
-    flex: 1;
-    padding: 20px;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
-
-.column.left {
-    background: linear-gradient(to bottom right, #f0f8ff, #a7c7e7);
-}
-
-.column.right {
-    background: linear-gradient(to bottom right, #e6e6fa, #c6c6e7);
-}
-
-/* Styles for Header and Footer */
-header, footer {
+    justify-content: center;
+    color: white;
     text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
     padding: 20px;
-    background-color: #f8f9fa;
-    border-top: 1px solid #ddd;
-}
-
-footer {
-    margin-top: 30px;
-}
-
-/* Keyframe Animation for Headers */
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
 }
 
 header h1 {
-    animation: slideIn 20s linear infinite;
-    margin-bottom: 20px;
+    font-size: 3rem;
 }
 
-/* Media Queries for Responsive Design */
+header p {
+    font-size: 1.2rem;
+}
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767px) {
-    .container {
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #004d40;
+    padding: 10px;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+button a {
+    text-decoration: none;
+    color: white;
+    background-color: #00796b;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+button a:hover {
+    background-color: #004d40;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #004d40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Gallery Page */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
         flex-direction: column;
+        align-items: center;
     }
-    nav {
-        flex-direction: column;
+
+    .header-content h1 {
+        font-size: 2.5rem;
     }
-    nav a {
-        margin: 10px 0;
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        flex-direction: row;
-        flex-wrap: wrap;
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem;
     }
-    .column {
-        flex: 1 1 100%;
-        margin: 10px 0;
+
+    .header-content p {
+        font-size: 0.9rem;
     }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Scalable Images */
+.scalable-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Table Styling (Extra Credit) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #00796b;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #004d40;
+    color: white;
 }

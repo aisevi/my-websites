@@ -3,35 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noate Club - About</title>
+    <title>Kalapu Noate - Kava Club</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
 </head>
 <body>
-    <!-- Navigation Menu -->
+    <header>
+        <div class="header-content">
+            <h1>Kalapu Noate</h1>
+            <p>Experience the tradition of kava in a modern setting</p>
+        </div>
+    </header>
+
     <nav>
-        <a href="index.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#benefits">Benefits of Kava</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Main Content for About Page -->
-    <div class="page">
-        <header>
-            <h1>Welcome to Kalapu Noate</h1>
-        </header>
-        <main class="container">
-            <div class="column left">
-                <img src="images/noate.png" alt="Description of image 1">
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 My Awesome Website. Created by [Aisea]</p>
-            <!-- External link opening in a new tab -->
-            <a href="https://example.com" target="_blank">Visit an External Website</a>
-            <!-- Link to the top of the page -->
+    <section id="about">
+        <h2>About Kalapu Noate</h2>
+        <p>Kalapu Noate is a place where tradition meets relaxation. Join us to experience the cultural heritage of kava drinking, enjoy its calming effects, and become part of a welcoming community.</p>
+        <img src="images/kava.png" alt="Kava Bowl" class="scalable-image">
+    </section>
+
+    <section id="benefits">
+        <h2>Benefits of Kava</h2>
+        <ul>
+            <li>Reduces stress and anxiety</li>
+            <li>Promotes relaxation</li>
+            <li>Enhances social interaction</li>
+            <li>Non-addictive and natural</li>
+        </ul>
+    </section>
+
+    <section id="join">
+        <h2>Join Our Kava Club</h2>
+        <p>Become a member of Kalapu Noate and enjoy exclusive benefits, including special events, discounts on kava, and more.</p>
+        <button><a href="membership.html">Learn More</a></button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kalapu Noate. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.youtube.com/@veahakalojr.4231" target="_blank">Visit an External Website</a>
             <a href="#top">Back to Top</a>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 </html>
