@@ -10,35 +10,66 @@
     <header>
         <div class="header-content">
             <h1>Membership Information</h1>
-            <p>Join Kalapu Noate and enjoy exclusive benefits</p>
         </div>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="benefits.html">Benefits of Kava</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="membership.html">Membership</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="membership">
-        <h2>Why Join Kalapu Noate?</h2>
-        <p>As a member, you'll enjoy exclusive benefits including:</p>
-        <ul>
-            <li>Discounts on kava and other products</li>
-            <li>Access to members-only events</li>
-            <li>Priority reservations for workshops and tastings</li>
-            <li>Regular updates and newsletters</li>
-        </ul>
-        <p>Annual Membership Fee: $50</p>
-        <button><a href="index.html#join">Join Now</a></button>
+    <section id="membership-info">
+        <h2>Why Join Us?</h2>
+        <p>Becoming a member of Kalapu Noate offers you a range of exclusive benefits and opportunities to immerse yourself in the kava culture.</p>
+        <div class="membership-benefits">
+            <div class="benefit-item">
+                <h3>Exclusive Events</h3>
+                <p>Access to special kava events, tastings, and cultural activities.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Discounts</h3>
+                <p>Enjoy discounts on kava purchases and merchandise.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Community</h3>
+                <p>Connect with like-minded individuals and be part of a supportive community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership-signup">
+        <h2>Sign Up Now!</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Why do you want to join?</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
     </section>
 
     <footer>
         <p>&copy; 2024 Kalapu Noate. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.youtube.com/@veahakalojr.4231" target="_blank">Visit an External Website</a>
+            <a href="#top">Back to Top</a>
+        </div>
+        <img src="images/logo.jpg" alt="Your Logo" id="footer-logo">
     </footer>
 </body>
 </html>

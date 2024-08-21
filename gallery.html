@@ -5,43 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalapu Noate - Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <h1>Kalapu Noate</h1>
+            <p>Experience the tradition of kava in a modern setting</p>
+        </div>
+    </header>
+
     <nav>
         <ul>
-            <li><a href="index.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="benefits.html">Benefits of Kava</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="membership.html">Membership</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="page">
-        <header>
-            <h1>Gallery</h1>
-        </header>
-        <main class="container">
+    <main>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Explore our collection of images capturing the essence of kava culture and the vibrant experiences at Kalapu Noate. Each photo tells a story of tradition, relaxation, and community.</p>
             <div class="gallery-grid">
-                <img src="images/kava1.png" alt="Gallery Image 1">
-                <img src="images/kava2.png" alt="Gallery Image 2">
-                <img src="images/kava3.png" alt="Gallery Image 3">
-                <img src="images/kava4.png" alt="Gallery Image 4">
-                <img src="images/kava5.png" alt="Gallery Image 5">
-                <img src="images/kava6.png" alt="Gallery Image 6">
-                <img src="images/kava7.png" alt="Gallery Image 7">
-                <img src="images/kava8.png" alt="Gallery Image 8">
-                <img src="images/kava9.png" alt="Gallery Image 9">
-                <img src="images/kava10.png" alt="Gallery Image 10">
-                <!-- Add more images as needed -->
+                <a href="images/kava1.png" data-lightbox="gallery" data-title="A serene kava ceremony."><img src="images/kava1.png" alt="Gallery Image 1"></a>
+                <a href="images/kava2.png" data-lightbox="gallery" data-title="Traditional kava preparation."><img src="images/kava2.png" alt="Gallery Image 2"></a>
+                <a href="images/kava3.png" data-lightbox="gallery" data-title="Kava bowls ready for the ceremony."><img src="images/kava3.png" alt="Gallery Image 3"></a>
+                <a href="images/kava4.png" data-lightbox="gallery" data-title="Guests enjoying kava together."><img src="images/kava4.png" alt="Gallery Image 4"></a>
+                <a href="images/kava5.png" data-lightbox="gallery" data-title="Close-up of kava roots."><img src="images/kava5.png" alt="Gallery Image 5"></a>
+                <a href="images/kava6.png" data-lightbox="gallery" data-title="A traditional kava drink being served."><img src="images/kava6.png" alt="Gallery Image 6"></a>
+                <a href="images/kava7.png" data-lightbox="gallery" data-title="Cultural performance during the kava ceremony."><img src="images/kava7.png" alt="Gallery Image 7"></a>
+                <a href="images/kava8.png" data-lightbox="gallery" data-title="Relaxed atmosphere of the kava lounge."><img src="images/kava8.png" alt="Gallery Image 8"></a>
+                <a href="images/kava9.png" data-lightbox="gallery" data-title="Guests enjoying kava under the stars."><img src="images/kava9.png" alt="Gallery Image 9"></a>
+                <a href="images/kava10.png" data-lightbox="gallery" data-title="Artistic representation of kava culture."><img src="images/kava10.png" alt="Gallery Image 10"></a>
             </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Kalapu Noate. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="https://www.youtube.com/@veahakalojr.4231" target="_blank">Visit an External Website</a>
-                <a href="#top">Back to Top</a>
-            </div>
-        </footer>
-    </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kalapu Noate. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.youtube.com/@veahakalojr.4231" target="_blank">Visit an External Website</a>
+            <a href="#top">Back to Top</a>
+        </div>
+        <img src="images/logo.jpg" alt="Your Logo" id="footer-logo">
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
