@@ -17,6 +17,7 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    animation: fadeInDown 1s ease-in-out;
 }
 
 header .header-content {
@@ -41,11 +42,13 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
     background-color: #004d40;
     border-radius: 5px;
+    transform: scale(1.1);
 }
 
 main {
@@ -54,6 +57,7 @@ main {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
 main h2 {
@@ -77,10 +81,12 @@ section {
     color: #004d40;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
+    color: #00796b;
 }
 
 footer {
@@ -88,6 +94,7 @@ footer {
     padding: 20px;
     background-color: #004d40;
     color: #fff;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 #footer-logo {
@@ -115,6 +122,7 @@ th, td {
 th {
     background-color: #00796b;
     color: white;
+    text-transform: uppercase;
 }
 
 /* Scalable Images */
@@ -128,16 +136,22 @@ th {
     display: flex;
     gap: 20px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .feature-item {
     flex: 1;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .feature-item img {
     max-width: 100px;
     margin-bottom: 10px;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
 }
 
 /* Timeline */
@@ -151,6 +165,19 @@ th {
     background-color: #e0f2f1;
     padding: 15px;
     border-left: 5px solid #004d40;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -8px;
+    width: 15px;
+    height: 15px;
+    background-color: #004d40;
+    border-radius: 50%;
 }
 
 /* Team Section */
@@ -158,11 +185,13 @@ th {
     display: flex;
     gap: 20px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .team-member {
     flex: 1;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
 .team-photo {
@@ -170,6 +199,15 @@ th {
     height: auto;
     border-radius: 50%;
     margin-bottom: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.team-photo:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
 }
 
 /* Testimonial Slider */
@@ -185,4 +223,37 @@ th {
     background-color: #e0f2f1;
     padding: 15px;
     border-left: 5px solid #00796b;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-grid, .team {
+        flex-direction: column;
+    }
+
+    .timeline-item, .testimonial-item {
+        min-width: 100%;
+    }
 }
